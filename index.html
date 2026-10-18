@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131b">
+  <meta name="description" content="LocalTube — eine schlichte, datensparsame Oberfläche für deine lokalen Medien-Downloads.">
+  <title>LocalTube</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="LocalTube Startseite"><span class="brand-mark">L</span><span>LocalTube</span></a>
+      <span class="local-badge"><i></i> Privat gedacht</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">DEINE MEDIEN. DEIN GERÄT.</div>
+      <h1>Ein Link. <span>Dein Download.</span></h1>
+      <p class="intro">Eine einfache Oberfläche für Medien, die du herunterladen darfst. Ohne Konto und ohne eingebautes Tracking.</p>
+
+      <form class="download-card" id="download-form">
+        <label for="media-url">Videolink</label>
+        <div class="url-row">
+          <input id="media-url" name="url" type="url" placeholder="https://…" autocomplete="url" inputmode="url" required>
+          <button class="paste-button" type="button" id="paste-button" title="Link aus der Zwischenablage einfügen">Einfügen</button>
+        </div>
+
+        <div class="options-grid">
+          <fieldset>
+            <legend>Format</legend>
+            <div class="segmented">
+              <label><input type="radio" name="format" value="mp4" checked><span>MP4 <small>Video</small></span></label>
+              <label><input type="radio" name="format" value="mp3"><span>MP3 <small>Audio</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Umfang</legend>
+            <div class="segmented">
+              <label><input type="radio" name="scope" value="single" checked><span>Ein Titel</span></label>
+              <label><input type="radio" name="scope" value="playlist"><span>Playlist</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <label class="permission-check"><input type="checkbox" id="rights-confirm" required><span>Ich habe die nötigen Rechte oder eine rechtliche Erlaubnis zum Herunterladen dieser Inhalte.</span></label>
+        <button class="download-button" type="submit"><span>Download vorbereiten</span><span aria-hidden="true">↗</span></button>
+        <p class="status" id="status" role="status" aria-live="polite">Bereit. Diese statische Website startet selbst keine Downloads.</p>
+      </form>
+
+      <div class="notes">
+        <div class="note-icon" aria-hidden="true">⌂</div>
+        <div><strong>Lokal statt über fremde Download-Portale</strong><p>Diese GitHub-Pages-Version sendet deinen Link nicht an einen Download-Anbieter. Sie lädt selbst keine Medien herunter. Die eigentliche Verarbeitung kann später durch einen separat installierten, abgesicherten lokalen Dienst für unterstützte und zulässige Quellen ergänzt werden.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <span>LocalTube · Ein kleines persönliches Werkzeug</span>
+      <span>Keine Tracker in dieser Oberfläche</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
