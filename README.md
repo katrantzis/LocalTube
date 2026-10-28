@@ -31,3 +31,15 @@ Verwende das Werkzeug nur für Inhalte, die du selbst erstellt hast, für die du
 ## Datenschutz
 
 Die Oberfläche speichert URLs nicht dauerhaft und sendet sie nicht an einen Download-Service. GitHub Pages selbst wird weiterhin von GitHub gehostet, und der Browser ruft für den Seitenaufruf Dateien von GitHub ab. Die Stylesheet-Datei lädt außerdem optionale Schriftarten von Google Fonts. Falls auch diese Drittanbieter-Anfrage vermieden werden soll, entferne den `@import` in `style.css`; die Seite verwendet danach Systemschriften.
+
+
+## Windows-App starten (optional)
+
+1. Lade das Repository über **Code → Download ZIP** herunter und entpacke es, oder klone es mit Git.
+2. Installiere Python 3 für Windows, falls es noch nicht installiert ist.
+3. Doppelklicke auf `Start-LocalTube.bat`.
+4. Das kleine Desktop-Fenster öffnet sich nur dann, wenn du es startest. Es speichert unterstützte direkte Dateilinks in deinen Windows-Ordner `Downloads`.
+
+Die App benötigt keine dauerhafte Hintergrundausführung und keine zusätzlichen Python-Pakete.
+
+**Derzeitige Grenze:** Die Windows-App verarbeitet nur direkte Links zu Mediendateien mit erkennbarer MP3-/MP4-Endung. Sie extrahiert keine Songs aus YouTube-Seiten, konvertiert keine Streams und verarbeitet keine Playlists. Verwende sie nur für Dateien, die du herunterladen darfst. Diese Einschränkung ist ausdrücklich dokumentiert; die Weboberfläche und diese App sind noch kein vollwertiger YouTube-Downloader.
